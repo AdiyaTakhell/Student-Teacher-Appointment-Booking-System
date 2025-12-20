@@ -36,3 +36,10 @@ Thumbs.db
 
 # --- Testing ---
 coverage/
+
+# --- SECURITY / SCRIPTS (Added) ---
+# Hide the script that creates the Admin user
+createAdmin.js
+seedAdmin.js
+adminSetup.js
+**/scripts/createAdmin.js
