@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* Neo-Brutalist Color Palette */
+  --color-neo-bg: #e0e7ff;         /* Light Indigo Background */
+  --color-neo-main: #a78bfa;       /* Main Purple */
+  --color-neo-accent: #6ee7b7;     /* Green Accent */
+  --color-neo-alert: #f87171;      /* Red Alert */
+
+  /* The Hard Shadow (Signature Look) */
+  --shadow-neo: 5px 5px 0px 0px #000000;
+  --shadow-neo-sm: 2px 2px 0px 0px #000000;
+  
+  /* Fonts */
+  --font-display: "Lexend Mega", sans-serif;
+}
+
+/* Global Reset */
+:root {
+  background-color: var(--color-neo-bg);
+  color: #000000;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
