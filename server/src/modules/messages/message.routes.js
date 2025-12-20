@@ -1,9 +1,16 @@
 import express from "express";
-import * as controller from "./message.controller.js";
-import { auth } from "../../shared/middleware/auth.middleware.js";
+import { getMessages, deleteMessage } from "./message.controller.js";
+import { verifyToken } from "../../middleware/auth.middleware.js";
 
 const router = express.Router();
-router.get("/:appointmentId", auth, controller.getMessages);
-router.post("/", auth, controller.sendMessage);
+
+// ✅ GET history
+router.get("/:appointmentId", verifyToken, getMessages);
+
+// ✅ DELETE message
+router.delete("/:id", verifyToken, deleteMessage);
+
+// ❌ DELETE OR REMOVE THIS LINE IF IT EXISTS:
+// router.post("/", verifyToken, sendMessage);  <-- This is causing the crash!
 
 export default router;
